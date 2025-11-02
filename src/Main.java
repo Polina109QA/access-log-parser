@@ -4,8 +4,25 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Введите текст и нажмите <Enter>: ");
-        String text = new Scanner(System.in).nextLine();
-        System.out.println("Длина текста: " + text.length());
+        System.out.println("Введите первое число: ");
+        int firstNumber = new Scanner(System.in).nextInt();
+        System.out.println("Введите второе число: ");
+        int secNumber = new Scanner(System.in).nextInt();
+
+        int addition = firstNumber + secNumber;
+        System.out.println("Сумма: " + addition);
+
+        int subtraction = firstNumber - secNumber;
+        System.out.println("Разность: " + subtraction);
+
+        int multiply = firstNumber * secNumber;
+        System.out.println("Произведение: " + multiply);
+
+        if (secNumber == 0) {
+            System.out.println("Второе число не должно равняться нулю");
+        } else {
+            double division = (double) firstNumber / secNumber;
+            System.out.println("Частное: " + division);
+        }
     }
 }
